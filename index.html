@@ -150,8 +150,8 @@
             <div class="footer-top">
                 <div class="logo">SAVOR</div>
                 <div class="footer-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Use</a>
+                    <a href="javascript:void(0)" onclick="openModal('privacyModal')">Privacy Policy</a>
+                    <a href="javascript:void(0)" onclick="openModal('termsModal')">Terms of Use</a>
                     <a href="https://github.com/venmugilrajan/Savor_Website">GitHub</a>
                 </div>
             </div>
@@ -160,6 +160,41 @@
             </div>
         </div>
     </footer>
+
+    <!-- MODALS -->
+    <div id="privacyModal" class="modal">
+        <div class="modal-content reveal-modal">
+            <span class="close-btn" onclick="closeModal('privacyModal')">&times;</span>
+            <h2>Privacy Policy</h2>
+            <div class="modal-body">
+                <p><strong>Effective Date: May 2026</strong></p>
+                <p>At Savor, your privacy is our highest priority. We do not sell your personal financial data to third parties. All transaction data is encrypted and stored securely using industry-standard protocols.</p>
+                <h3>1. Data Collection</h3>
+                <p>We collect only the information necessary to provide you with financial tracking services, including transaction amounts, categories, and account names.</p>
+                <h3>2. Security</h3>
+                <p>We implement strict Row Level Security (RLS) on our databases and use local encryption to ensure your data remains isolated and protected.</p>
+                <h3>3. Transparency</h3>
+                <p>You have full control over your data and can delete your account and all associated records at any time.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="termsModal" class="modal">
+        <div class="modal-content reveal-modal">
+            <span class="close-btn" onclick="closeModal('termsModal')">&times;</span>
+            <h2>Terms of Use</h2>
+            <div class="modal-body">
+                <p><strong>Last Updated: May 2026</strong></p>
+                <p>By using the Savor application and website, you agree to the following terms:</p>
+                <h3>1. User Responsibility</h3>
+                <p>Users are responsible for maintaining the confidentiality of their PIN and account credentials.</p>
+                <h3>2. Service Usage</h3>
+                <p>Savor provides financial tracking tools for personal and team use. We are not responsible for any financial decisions made based on the data provided by the app.</p>
+                <h3>3. Intellectual Property</h3>
+                <p>All brand assets, including the Savor name and logo, are the exclusive property of Savor Intelligence.</p>
+            </div>
+        </div>
+    </div>
 
     <script>
         lucide.createIcons();
@@ -171,6 +206,24 @@
             easing: 'cubic-bezier(0.5, 0, 0, 1)',
             interval: 150
         });
+
+        function openModal(id) {
+            document.getElementById(id).style.display = "flex";
+            document.body.style.overflow = "hidden"; // Prevent scrolling
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).style.display = "none";
+            document.body.style.overflow = "auto"; // Restore scrolling
+        }
+
+        // Close when clicking outside
+        window.onclick = function(event) {
+            if (event.target.className === 'modal') {
+                event.target.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        }
     </script>
 </body>
 </html>
