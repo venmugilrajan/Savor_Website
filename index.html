@@ -25,8 +25,27 @@
                 <a href="#security">Security</a>
                 <a href="https://github.com/venmugilrajan/Savor_Website/releases/latest/download/Savor.apk" class="btn-dark">Download APK</a>
             </div>
+            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i data-lucide="menu"></i>
+            </div>
         </div>
     </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileDrawer" class="mobile-drawer">
+        <div class="drawer-header">
+            <div class="logo">SAVOR</div>
+            <div class="close-drawer" onclick="toggleMobileMenu()">
+                <i data-lucide="x"></i>
+            </div>
+        </div>
+        <div class="drawer-links">
+            <a href="#philosophy" onclick="toggleMobileMenu()">Experience</a>
+            <a href="#features" onclick="toggleMobileMenu()">Features</a>
+            <a href="#security" onclick="toggleMobileMenu()">Security</a>
+            <a href="https://github.com/venmugilrajan/Savor_Website/releases/latest/download/Savor.apk" class="btn-dark-mobile">Download APK</a>
+        </div>
+    </div>
 
     <main>
         <section class="hero-asymmetric">
@@ -217,11 +236,14 @@
             document.body.style.overflow = "auto"; // Restore scrolling
         }
 
-        // Close when clicking outside
-        window.onclick = function(event) {
-            if (event.target.className === 'modal') {
-                event.target.style.display = "none";
+        function toggleMobileMenu() {
+            const drawer = document.getElementById('mobileDrawer');
+            if (drawer.style.right === "0px") {
+                drawer.style.right = "-100%";
                 document.body.style.overflow = "auto";
+            } else {
+                drawer.style.right = "0px";
+                document.body.style.overflow = "hidden";
             }
         }
     </script>
