@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Savor — Refined Financial Tracking</title>
+    <title>Savor — Refined Financial Intelligence</title>
     <link rel="icon" type="image/png" href="assets/app_icon_1.png">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
     <nav class="minimal-nav">
         <div class="container nav-content">
-            <div class="logo">SAVOR</div>
+            <div class="logo-group">
+                <img src="assets/app_icon_1.png" alt="Savor Icon" class="nav-icon">
+                <div class="logo">SAVOR</div>
+            </div>
             <div class="nav-links">
-                <a href="#philosophy">Philosophy</a>
+                <a href="#philosophy">Experience</a>
+                <a href="#features">Features</a>
                 <a href="#security">Security</a>
                 <a href="https://github.com/venmugilrajan/Savor_Website/releases/latest/download/Savor.apk" class="btn-dark">Download APK</a>
             </div>
@@ -25,16 +29,23 @@
     </nav>
 
     <main>
-        <section class="hero-minimal">
+        <section class="hero-asymmetric">
             <div class="container">
-                <div class="hero-center reveal">
-                    <span class="eyebrow">A New Standard of Excellence</span>
-                    <h1>Wealth management, <br><em>beautifully</em> simplified.</h1>
-                    <p>Savor is a refined tool for the discerning individual. Track, analyze, and master your finances with an interface that feels like home.</p>
-                    <div class="hero-cta">
-                        <a href="https://github.com/venmugilrajan/Savor_Website/releases/latest/download/Savor.apk" class="btn-outline">
-                            Get the Application
-                        </a>
+                <div class="hero-split reveal">
+                    <div class="hero-left">
+                        <span class="eyebrow">Financial Mastery Reimagined</span>
+                        <h1>Wealth management, <br><em>beautifully</em> simplified.</h1>
+                        <p>Savor is a refined tool designed to help you track, analyze, and master your finances with the exact elegance of your digital life.</p>
+                        <div class="hero-cta">
+                            <a href="https://github.com/venmugilrajan/Savor_Website/releases/latest/download/Savor.apk" class="btn-outline">
+                                Get the Application
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-right">
+                        <div class="static-logo-container">
+                            <img src="assets/app_icon_1.png" alt="Savor App Icon" class="logo-static">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -42,6 +53,10 @@
 
         <section id="philosophy" class="philosophy">
             <div class="container">
+                <div class="philosophy-header reveal">
+                    <h2>Our Philosophy</h2>
+                    <p>We believe that financial clarity should be effortless, private, and stunningly beautiful.</p>
+                </div>
                 <div class="philosophy-grid">
                     <div class="phil-item reveal">
                         <div class="phil-icon"><i data-lucide="feather"></i></div>
@@ -62,11 +77,69 @@
             </div>
         </section>
 
-        <section class="security-accent reveal">
+        <section id="features" class="detailed-features">
+            <div class="container">
+                <div class="feature-row reveal">
+                    <div class="feature-text">
+                        <span class="feature-tag">Intelligence</span>
+                        <h2>Natural Language Entry</h2>
+                        <p>Forget complex forms. Simply type your expense in plain English and Savor instantly categorizes and logs it. It's built to understand how you think.</p>
+                        <ul class="luxury-list">
+                            <li><i data-lucide="check"></i> Automatic Categorization</li>
+                            <li><i data-lucide="check"></i> Intelligent Parsing</li>
+                            <li><i data-lucide="check"></i> Real-time Updates</li>
+                        </ul>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="glass-card">
+                            <div class="card-line"></div>
+                            <div class="card-line short"></div>
+                            <div class="card-circle"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-row reverse reveal">
+                    <div class="feature-text">
+                        <span class="feature-tag">Collaboration</span>
+                        <h2>Shared Workspaces</h2>
+                        <p>Manage shared expenses with your partner or family. Savor provides secure, partitioned workspaces where everyone stays in sync while maintaining individual privacy.</p>
+                        <ul class="luxury-list">
+                            <li><i data-lucide="check"></i> Multi-User Sync</li>
+                            <li><i data-lucide="check"></i> Group Category Rules</li>
+                            <li><i data-lucide="check"></i> Real-time Notifications</li>
+                        </ul>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="glass-card">
+                            <i data-lucide="users" class="large-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="security" class="security-accent reveal">
             <div class="container">
                 <div class="security-card">
-                    <h2>Ironclad Security</h2>
-                    <p>Financial peace of mind starts with safety. Savor uses biometric-grade encryption and secure partitioning for your team data.</p>
+                    <div class="security-icon"><i data-lucide="shield-check"></i></div>
+                    <h2>Reliable Security</h2>
+                    <p>Savor uses industry-standard PIN protection and secure local storage to keep your data isolated and protected on your device.</p>
+                    <div class="security-badges">
+                        <span>Secure PIN Lock</span>
+                        <span>RLS Database Protection</span>
+                        <span>Hardware-Level Encryption</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="final-cta reveal">
+            <div class="container">
+                <div class="cta-inner">
+                    <h2>Take Control Today.</h2>
+                    <p>Join the growing community of Savor users.</p>
+                    <a href="https://github.com/venmugilrajan/Savor_Website/releases/latest/download/Savor.apk" class="btn-dark-large">Download Savor App</a>
                 </div>
             </div>
         </section>
@@ -77,8 +150,8 @@
             <div class="footer-top">
                 <div class="logo">SAVOR</div>
                 <div class="footer-links">
-                    <a href="#">Privacy</a>
-                    <a href="#">Terms</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
                     <a href="https://github.com/venmugilrajan/Savor_Website">GitHub</a>
                 </div>
             </div>
@@ -92,10 +165,11 @@
         lucide.createIcons();
         ScrollReveal().reveal('.reveal', { 
             delay: 300, 
-            distance: '30px', 
+            distance: '40px', 
             duration: 1200, 
             origin: 'bottom',
-            easing: 'cubic-bezier(0.5, 0, 0, 1)'
+            easing: 'cubic-bezier(0.5, 0, 0, 1)',
+            interval: 150
         });
     </script>
 </body>
